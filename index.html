@@ -1,1 +1,372 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Name | Portfolio</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #0f172a;
+      color: #fff;
+      line-height: 1.6;
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+      background: rgba(15, 23, 42, 0.95);
+      border-bottom: 1px solid #334155;
+    }
+
+    nav {
+      max-width: 1100px;
+      margin: auto;
+      padding: 18px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+      color: #38bdf8;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #38bdf8;
+    }
+
+    section {
+      max-width: 1100px;
+      margin: auto;
+      padding: 90px 20px;
+    }
+
+    #home {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: clamp(40px, 8vw, 75px);
+      margin-bottom: 15px;
+    }
+
+    .hero h1 span {
+      color: #38bdf8;
+    }
+
+    .hero p {
+      font-size: 20px;
+      color: #cbd5e1;
+      margin-bottom: 30px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 25px;
+      background: #38bdf8;
+      color: #0f172a;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      margin: 5px;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      transform: translateY(-3px);
+      background: #7dd3fc;
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: #38bdf8;
+      border: 1px solid #38bdf8;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 35px;
+      margin-bottom: 45px;
+    }
+
+    .section-title span {
+      color: #38bdf8;
+    }
+
+    .about {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .about-card {
+      background: #1e293b;
+      padding: 30px;
+      border-radius: 15px;
+    }
+
+    .about p {
+      color: #cbd5e1;
+    }
+
+    .skills {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .skill {
+      background: #1e293b;
+      padding: 25px;
+      text-align: center;
+      border-radius: 12px;
+      transition: 0.3s;
+    }
+
+    .skill:hover {
+      transform: translateY(-5px);
+      background: #263449;
+    }
+
+    .skill h3 {
+      color: #38bdf8;
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+    }
+
+    .project {
+      background: #1e293b;
+      padding: 25px;
+      border-radius: 12px;
+    }
+
+    .project h3 {
+      color: #38bdf8;
+      margin-bottom: 10px;
+    }
+
+    .project p {
+      color: #cbd5e1;
+      margin-bottom: 20px;
+    }
+
+    .contact {
+      text-align: center;
+    }
+
+    .contact p {
+      color: #cbd5e1;
+      margin: 10px 0;
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px;
+      border-top: 1px solid #334155;
+      color: #94a3b8;
+    }
+
+    @media (max-width: 768px) {
+      nav ul {
+        display: none;
+      }
+
+      .about {
+        grid-template-columns: 1fr;
+      }
+
+      .skills {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .projects {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 450px) {
+      .skills {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <header>
+    <nav>
+      <div class="logo">YourName</div>
+
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section id="home">
+    <div class="hero">
+      <p>Hello, I'm</p>
+      <h1><span>Your Name</span></h1>
+      <p>Web Developer & Designer</p>
+
+      <a href="#projects" class="btn">View My Work</a>
+      <a href="#contact" class="btn btn-outline">Contact Me</a>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about">
+    <h2 class="section-title">About <span>Me</span></h2>
+
+    <div class="about">
+      <div class="about-card">
+        <h2>Who I Am</h2>
+        <br>
+        <p>
+          I am a passionate web developer who loves creating
+          modern, responsive and user-friendly websites.
+          I enjoy turning ideas into beautiful digital experiences.
+        </p>
+      </div>
+
+      <div class="about-card">
+        <h2>My Goal</h2>
+        <br>
+        <p>
+          My goal is to build fast, attractive and useful
+          websites that help people and businesses grow online.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills">
+    <h2 class="section-title">My <span>Skills</span></h2>
+
+    <div class="skills">
+      <div class="skill">
+        <h3>HTML</h3>
+        <p>95%</p>
+      </div>
+
+      <div class="skill">
+        <h3>CSS</h3>
+        <p>90%</p>
+      </div>
+
+      <div class="skill">
+        <h3>JavaScript</h3>
+        <p>85%</p>
+      </div>
+
+      <div class="skill">
+        <h3>Responsive Design</h3>
+        <p>90%</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects">
+    <h2 class="section-title">My <span>Projects</span></h2>
+
+    <div class="projects">
+
+      <div class="project">
+        <h3>Project One</h3>
+        <p>
+          A modern responsive website created using HTML,
+          CSS and JavaScript.
+        </p>
+        <a href="#" class="btn">View Project</a>
+      </div>
+
+      <div class="project">
+        <h3>Project Two</h3>
+        <p>
+          A clean business website designed for mobile
+          and desktop users.
+        </p>
+        <a href="#" class="btn">View Project</a>
+      </div>
+
+      <div class="project">
+        <h3>Project Three</h3>
+        <p>
+          A simple web application with an attractive
+          and user-friendly interface.
+        </p>
+        <a href="#" class="btn">View Project</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <h2 class="section-title">Contact <span>Me</span></h2>
+
+    <div class="contact">
+      <p>Have a project in mind? Let's work together!</p>
+
+      <p>📧 your@email.com</p>
+      <p>📱 +91 98765 43210</p>
+
+      <br>
+
+      <a href="mailto:your@email.com" class="btn">
+        Send Email
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    © 2026 Your Name. All Rights Reserved.
+  </footer>
+
+</body>
+</html>
